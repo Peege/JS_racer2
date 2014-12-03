@@ -1,6 +1,7 @@
 <div class="container">
   <h1>RUBY RACER</h1>
   <p>Enter your names</p>
+
    <table>
     <form action='/games' method='post'>
       Player 1: <input type='text' name='player1'><br><br>
@@ -9,23 +10,6 @@
     <input type='submit' value='Start new game'>
   </form>
    </table>
+
+
 </div>
-
-
-<table> <style="width:100%">
-  <tr>
-    <th>Game no.</th>
-    <th>Winner</th>
-    <th>Result time</th>
-  </tr>
-    <% Gaming.all.each do |game| %>
-    <tr>
-      <td><%= game.id %></td>
-      <% game.players.each do |player| %>
-
-      <td><%= player.username %></td>
-      <% end %>
-      <td><%= game.total_time %></td>
-    </tr>
-
-
